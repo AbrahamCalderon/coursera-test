@@ -15,6 +15,7 @@
             if($scope.items == ""){                
                 $scope.message = "Please enter data first";
                 $scope.messageColor={'color': 'red'};
+                $scope.inputBoxColor={'border-style':'solid', 'border-color':'red'};
             }
             else{
                 var nonBlanks = new Array();
@@ -26,14 +27,17 @@
                 if(nonBlanks.length == 0){// In the case case of all empties: i.e.: ,,,
                     $scope.message = "Please enter data first";
                     $scope.messageColor={'color': 'red'};
+                    $scope.inputBoxColor={'border-style':'solid', 'border-color':'red'};
                 }
                 else if(nonBlanks.length <= 3){
                     $scope.message = "Enjoy!";
                     $scope.messageColor={'color': 'green'};
+                    $scope.inputBoxColor={'border-style':'solid', 'border-color':'green'};
                 }
                 else{
                     $scope.message = "Too Much!";
                     $scope.messageColor={'color': 'green'};
+                    $scope.inputBoxColor={'border-style':'solid', 'border-color':'green'};
                 }
             }
         };
